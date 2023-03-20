@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">NotePad</string>
+    <string name="audio_note_placeholder">TakeAudioNotes</string>
+    <string name="add_note_placeholder">&#160;&#160;&#160;Take a note...</string>
+    <string name="add_note">Add</string>
+    <string name="update_note">Update</string>
+</resources>
