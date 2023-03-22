@@ -7,24 +7,47 @@
     tools:context=".MainActivity">
 
 
-    <SearchView
-        android:id="@+id/searchView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@android:color/transparent"
-        android:iconifiedByDefault="false"
-        android:queryHint="Search notes"
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="415dp"
+        android:layout_height="47dp"
+        android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">
 
-    <ListView
+        <SearchView
+            android:id="@+id/searchView"
+            android:layout_width="319dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.8"
+            android:background="@android:color/transparent"
+            android:iconifiedByDefault="false"
+            android:queryHint="Search notes">
+
+        </SearchView>
+
+        <View
+            android:layout_width="5dp"
+            android:layout_height="0dp"
+            android:layout_weight="0.1"/>
+
+        <ToggleButton
+            android:id="@+id/toggleButton"
+            android:layout_width="40dp"
+            android:layout_height="45dp"
+            android:layout_weight="0.1"
+            android:textOff=""
+            android:textOn="" />
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/noteListView"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         app:layout_constraintBottom_toTopOf="@+id/cardView"
-        app:layout_constraintStart_toStartOf="@+id/searchView"
-        app:layout_constraintTop_toBottomOf="@+id/searchView" />
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView"
